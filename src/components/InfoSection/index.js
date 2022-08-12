@@ -1,44 +1,70 @@
-import React from 'react'
-import { Button } from '../ButtonElements'
-import {InfoContainer, InfoWrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Heading, BtnWrap, ImgWrap, Img, Subtitle} from './InfoElements'
+import React from "react";
+import { Button } from "../ButtonElements";
+import {
+  InfoContainer,
+  InfoWrapper,
+  InfoRow,
+  Column1,
+  Column2,
+  TextWrapper,
+  TopLine,
+  Heading,
+  BtnWrap,
+  ImgWrap,
+  Img,
+  Subtitle,
+} from "./InfoElements";
 
-const InfoSection = ({lightBg, 
-  id, 
-  imgStart, 
-  topLine, 
-  lightText, 
-  headLine, 
-  darkText, 
-  description, 
-  buttonLabel, 
-  img, 
-  alt }) => {
+import image from "../../images/svg-1.svg";
 
+const InfoSection = ({
+  lightBg,
+  id,
+  imgStart,
+  topLine,
+  lightText,
+  headLine,
+  darkText,
+  description,
+  buttonLabel,
+  img,
+  alt,
+}) => {
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
         <InfoWrapper>
-            <InfoRow imgStart={imgStart}>
-                <Column1>
-                <TextWrapper>
-                    <TopLine>{topLine}</TopLine>
-                    <Heading lightText={lightText}>{headLine}</Heading>
-                    <Subtitle darkText={darkText}>{description}</Subtitle>
-                    <BtnWrap>
-                        <Button to="home">{buttonLabel}</Button>
-                    </BtnWrap>
-                </TextWrapper>
-                </Column1>
-                <Column2>
-                  <ImgWrap>
-                  <Img src={img} alt={alt} />
-                  </ImgWrap>
-                </Column2>
-            </InfoRow>
+          <InfoRow imgStart={imgStart}>
+            <Column1>
+              <TextWrapper>
+                <TopLine>{topLine}</TopLine>
+                <Heading lightText={lightText}>{headLine}</Heading>
+                <Subtitle darkText={darkText}>{description}</Subtitle>
+                <BtnWrap>
+                  <Button to="home">{buttonLabel}</Button>
+                </BtnWrap>
+              </TextWrapper>
+            </Column1>
+            <Column2>
+              <ImgWrap>
+                <Img
+                  src={
+                    // "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
+                    image
+                  }
+                  //   img
+                  //     ? img
+                  //     : "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"
+                  // }
+                  // alt={alt}
+                />
+              </ImgWrap>
+            </Column2>
+          </InfoRow>
         </InfoWrapper>
       </InfoContainer>
     </>
-  )
-}
+  );
+};
 
-export default InfoSection
+export default InfoSection;
