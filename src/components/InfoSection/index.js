@@ -3,18 +3,20 @@ import { Button } from '../ButtonElements'
 import {InfoContainer, InfoWrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Heading, BtnWrap, ImgWrap, Img, Subtitle} from './InfoElements'
 import image from "../../images/svg-1.svg";
 
-const InfoSection = ({lightBg, 
-  id, 
-  imgStart, 
-  topLine, 
-  lightText, 
-  headLine, 
-  darkText, 
-  description, 
-  buttonLabel, 
-  img, 
-  alt }) => {
 
+const InfoSection = ({
+  lightBg,
+  id,
+  imgStart,
+  topLine,
+  lightText,
+  headLine,
+  darkText,
+  description,
+  buttonLabel,
+  img,
+  alt,
+}) => {
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
@@ -39,7 +41,7 @@ const InfoSection = ({lightBg,
         </InfoWrapper>
       </InfoContainer>
     </>
-  )
-}
+  );
+};
 
-export default InfoSection
+export default InfoSection;
